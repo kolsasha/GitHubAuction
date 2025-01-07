@@ -1,0 +1,12 @@
+on: 
+  push
+  
+jobs:
+  display_output:
+    name: display a file
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display the output
+        run: |
+          Welcome
+        shell: bash
