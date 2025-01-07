@@ -4,5 +4,10 @@ on:
 jobs:
   check-commit-message:
     runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+      uses: action/checkout@v2
+      
+      
   
   
