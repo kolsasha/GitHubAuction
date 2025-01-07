@@ -26,5 +26,5 @@ jobs:
         run: |
           echo "This is local name $name"
           echo "This is job 2"
-          echo "The topic is ${{vars.topic}}"
+          echo "The topic is ${{vars.COURSE_SECRET_VARIABLE}}"
         shell: bash
