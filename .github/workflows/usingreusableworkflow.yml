@@ -1,0 +1,8 @@
+on:
+  push
+
+jobs:
+  call-reusable-workflow:
+    uses: ./.github/workflows/reuseable-workflow.yaml
+    with:
+      message: "This is the main workflow."
