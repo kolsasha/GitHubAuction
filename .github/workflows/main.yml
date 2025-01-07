@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Display the output
         run: |
-          Welcome
+          cat Welcome
         shell: bash
