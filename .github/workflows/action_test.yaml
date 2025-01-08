@@ -1,17 +1,21 @@
 on:
-  push 
+  push
 
 jobs:
-  login_to_azure: 
+  deploy_resources:
     runs-on: ubuntu-latest
 
-    steps: 
-      - name: checkout code 
+    steps:
+      - name: Checkout code
         uses: actions/checkout@v2
-      - name: login to Azure 
+
+      - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURESECRET }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Login Confirmation
         if: success()
         run: echo "Login pass"
+
+      - name: Create Resource Group
+        run: az group create --name "myresourcegroup" --location eastus
