@@ -12,7 +12,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Login Confirmation
         if: success()
         run: echo "Login pass"
